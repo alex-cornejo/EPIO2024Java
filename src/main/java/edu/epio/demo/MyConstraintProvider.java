@@ -10,15 +10,11 @@ import static ai.timefold.solver.core.api.score.stream.Joiners.overlapping;
 public class MyConstraintProvider implements ConstraintProvider {
     @Override
     public Constraint[] defineConstraints(ConstraintFactory constraintFactory) {
-        return new Constraint[]{
-                overlappingTime(constraintFactory)
-        };
+        return new Constraint[0];
     }
 
     private Constraint overlappingTime(ConstraintFactory constraintFactory) {
-        return constraintFactory.forEachUniquePair(Appointment.class,
-                overlapping(Appointment::getStart, Appointment::getEnd))
-                .penalize(HardSoftScore.ONE_HARD)
-                .asConstraint("overlapping time");
+        // TODO
+        return null;
     }
 }

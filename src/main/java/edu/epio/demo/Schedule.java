@@ -9,16 +9,16 @@ import ai.timefold.solver.core.api.score.buildin.hardsoft.HardSoftScore;
 import java.time.LocalTime;
 import java.util.List;
 
-@PlanningSolution
+// TODO
 public class Schedule {
 
-    @PlanningEntityCollectionProperty
+    // TODO
     List<Appointment> appointments;
 
-    @ValueRangeProvider
+    // TODO
     List<LocalTime> startTimes;
 
-    @PlanningScore
+    // TODO
     HardSoftScore score;
 
     public Schedule() {

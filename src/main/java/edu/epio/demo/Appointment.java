@@ -7,15 +7,15 @@ import ai.timefold.solver.core.api.domain.variable.PlanningVariable;
 import java.time.Duration;
 import java.time.LocalTime;
 
-@PlanningEntity
+// TODO
 public class Appointment {
 
-    @PlanningId
+    // TODO
     String name;
 
     Duration duration;
 
-    @PlanningVariable
+    // TODO
     LocalTime start;
 
     public Appointment() {

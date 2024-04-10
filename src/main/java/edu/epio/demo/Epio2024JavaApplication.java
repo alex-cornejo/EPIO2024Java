@@ -48,15 +48,7 @@ public class Epio2024JavaApplication {
 
 	@PostMapping("/")
 	public Schedule schedule(@RequestBody ScheduleRequest request) throws ExecutionException, InterruptedException {
-		List<Appointment> appointments = request.getAppointments();
-		List<LocalTime> startTimes = request.getStartTimes();
-
-		SolverFactory<Schedule> solverFactory = SolverFactory.createFromXmlResource(
-				"appointments.xml");
-
-		var solver = solverFactory.buildSolver();
-		var problem = new Schedule(appointments, startTimes);
-		var solution = solver.solve(problem);
-		return solution;
+		// TODO
+		return null;
 	}
 }
