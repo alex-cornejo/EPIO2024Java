@@ -1,0 +1,8 @@
+{
+  "appointments": [
+    {"name": "doctor", "duration": "PT1H"},
+    {"name": "pub", "duration": "PT4H"},
+    {"name": "barber", "duration": "PT1H10M"}
+  ],
+  "startTimes": ["15:00", "16:00", "17:00", "18:00"]
+}
