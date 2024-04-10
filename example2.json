@@ -1,11 +1,11 @@
 {
   "appointments": [
-    {"name": "dentist", "duration": "PT1H", "date": "2024-04-10T09:00:00", "location": "Dental Clinic A"},
-    {"name": "optometrist", "duration": "PT40M", "date": "2024-04-11T10:30:00", "location": "Eye Care Center B"},
-    {"name": "dermatologist", "duration": "PT1H30M", "date": "2024-04-12T14:15:00", "location": "Skin Clinic C"},
-    {"name": "cardiologist", "duration": "PT45M", "date": "2024-04-13T08:30:00", "location": "Heart Hospital D"},
-    {"name": "orthopedist", "duration": "PT1H20M", "date": "2024-04-14T11:00:00", "location": "Ortho Clinic E"},
-    {"name": "pediatrician", "duration": "PT30M", "date": "2024-04-15T16:45:00", "location": "Children's Clinic F"}
+    {"name": "dentist", "duration": "PT1H", "location": "Dental Clinic A"},
+    {"name": "optometrist", "duration": "PT40M", "location": "Eye Care Center B"},
+    {"name": "dermatologist", "duration": "PT1H30M", "location": "Skin Clinic C"},
+    {"name": "cardiologist", "duration": "PT45M", "location": "Heart Hospital D"},
+    {"name": "orthopedist", "duration": "PT1H20M", "location": "Ortho Clinic E"},
+    {"name": "pediatrician", "duration": "PT30M", "location": "Children's Clinic F"}
   ],
   "startTimes": ["09:00", "10:30", "14:15", "08:30", "11:00", "16:45", "18:00", "19:30"]
 }

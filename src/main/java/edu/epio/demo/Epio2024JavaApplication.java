@@ -1,6 +1,8 @@
 package edu.epio.demo;
 
+import ai.timefold.solver.core.api.solver.SolverFactory;
 import ai.timefold.solver.core.api.solver.SolverManager;
+import ai.timefold.solver.core.config.solver.SolverConfig;
 import edu.epio.demo.domain.ScheduleRequest;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
@@ -44,14 +46,17 @@ public class Epio2024JavaApplication {
 		return solution;
 	}
 
-
 	@PostMapping("/")
 	public Schedule schedule(@RequestBody ScheduleRequest request) throws ExecutionException, InterruptedException {
 		List<Appointment> appointments = request.getAppointments();
 		List<LocalTime> startTimes = request.getStartTimes();
 
+		SolverFactory<Schedule> solverFactory = SolverFactory.createFromXmlResource(
+				"appointments.xml");
+
+		var solver = solverFactory.buildSolver();
 		var problem = new Schedule(appointments, startTimes);
-		var solution = solverManager.solve("job 1", problem).getFinalBestSolution();
+		var solution = solver.solve(problem);
 		return solution;
 	}
 }
